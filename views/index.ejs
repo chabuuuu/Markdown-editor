@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown Editor</h1>
+        <div class="controls">
+            <button id="boldBtn">In đậm</button>
+            <button id="headerBtn">Header (##)</button>
+            <!-- <button id="colorBtn">Đổi màu chữ</button> -->
+            <input type="file" id="imageUpload" accept="image/*">
+            <!-- Nút để chọn màu -->
+            <button id="colorBtn">Chọn màu</button>
+            <input type="color" id="colorPicker" style="display: none;">
+
+        </div>
+
+        <textarea id="editor" placeholder="Nhập nội dung Markdown ở đây..." rows="15"></textarea>
+        
+        <button id="generateBtn">Tạo file Markdown</button>
+        
+        <div id="output">
+            <h2>Preview Markdown:</h2>
+            <div id="mdPreview" class="preview-container"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.4/marked.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
